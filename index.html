@@ -88,7 +88,8 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
         </div>        
         <script>
             H5P.externalDispatcher.on('xAPI', function (event) {
-  console.log(event.data.statement);
+                Print.postMessage(event.data.statement);
+
 });
 </script>
     </body>
