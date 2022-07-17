@@ -98,12 +98,11 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
           
 
 });
-            var iframeH5P = document.getElementsByClassName('h5p-iframe')[0].contentWindow.H5P
-            var iframeVideo = iframeH5P.instances[0].video;
-            iframeVideo.addEventListener("timeupdate", myFunction)
+            const interactiveVideo = document.getElementsByClassName('h5p-iframe')[0].contentWindow.H5P.instances[0];
+            interactiveVideo.addEventListener("timeupdate", myFunction)
 
             function myFunction () {
-                getTime.postMessage(iframeVideo.currentTime);
+                getTime.postMessage(interactiveVideo.currentTime());
             }
 </script>
 
