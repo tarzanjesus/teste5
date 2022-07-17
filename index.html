@@ -96,7 +96,9 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
        //     var dados = JSON.stringify(event.data.statement);
           
        //   getData.postMessage(dados);
-          
+       const interactiveVideo = document.getElementsByClassName('h5p-iframe')[0].contentWindow.H5P.instances[0];
+            var dados = JSON.stringify(interactiveVideo.currentTime);
+            getData.postMessage(dados);
 
 });
             const interactiveVideo = document.getElementsByClassName('h5p-iframe')[0].contentWindow.H5P.instances[0];
