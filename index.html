@@ -102,7 +102,7 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
             interactiveVideo.addEventListener("timeupdate", myFunction)
 
             function myFunction () {
-                getTime.postMessage(interactiveVideo.currentTime());
+                getTime.postMessage(JSON.stringify(interactiveVideo.currentTime));
             }
 </script>
 
