@@ -95,15 +95,16 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
             console.log(event.data.statement);
             var dados = JSON.stringify(event.data.statement);
             getData.postMessage(dados);
-            var iframeH5P = document.getElementsByClassName('h5p-iframe')[0].contentWindow.H5P
+          
+
+});
+var iframeH5P = document.getElementsByClassName('h5p-iframe')[0].contentWindow.H5P
             var iframeVideo = iframeH5P.instances[0].video;
             iframeVideo.ontimeupdate = function(){myFunction()};
 
             function myFunction () {
                 getTime.postMessage(iframeVideo.currentTime);
             }
-
-});
 </script>
 
     </body>
