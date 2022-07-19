@@ -99,7 +99,8 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
               
     
     }); 
-
+</script>
+<script>
   H5P.externalDispatcher.trigger('initialized', H5P);
   H5P.externalDispatcher.on('initialized', (event) => {
 
@@ -113,7 +114,7 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
 
         case H5P.Video.PLAYING:
         var intervalo = setInterval(function(){ 
-       // getTime.postMessage(video.getCurrentTime());
+       getTime.postMessage(video.getCurrentTime());
         }, 30);
           break;
 
@@ -127,7 +128,10 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
       }
     });
 });
+
+
 </script>
+
 
     </body>
 </html>
