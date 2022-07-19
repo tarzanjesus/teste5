@@ -105,6 +105,7 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
   H5P.externalDispatcher.on('initialized', (event) => {
 
     var video = H5P.instances[0].video;
+    var intervalo;
 
       video.on('stateChange', function (e) {
       switch (e.data) {
@@ -113,8 +114,8 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
           break;
 
         case H5P.Video.PLAYING:
-        var intervalo = setInterval(function(){ 
-       getTime.postMessage(video.getCurrentTime());
+        intervalo = setInterval(function(){ 
+        getTime.postMessage(video.getCurrentTime());
         }, 30);
           break;
 
