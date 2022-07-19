@@ -111,16 +111,19 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
       switch (e.data) {
         case H5P.Video.BUFFERING:
           clearInterval(intervalo);
+          console.log('done');
           break;
 
         case H5P.Video.PLAYING:
         intervalo = setInterval(function(){ 
-        getTime.postMessage(video.getCurrentTime());
+       getTime.postMessage(video.getCurrentTime());
         }, 30);
+        console.log(intervalo);
           break;
 
         case H5P.Video.PAUSED:
         clearInterval(intervalo);
+
           break;
 
         case H5P.Video.ENDED:
