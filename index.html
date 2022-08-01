@@ -95,9 +95,9 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
                         console.log(event.data.statement);
                        var dados = JSON.stringify(event.data.statement);
                       
-                     //  var score = dados.split("score");
-                        //getData.postMessage(score[1]);
-                      getData.postMessage(dados);
+                       var score = dados.split("score");
+                        getData.postMessage(score[1]);
+                      
             
             }); 
         </script>
